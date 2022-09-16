@@ -1,6 +1,18 @@
 import React from 'react'
 
 function Post(props) {
+
+  let [estadoSalvaPostagem, setEstadoSalvaPostagem] = React.useState();
+  
+
+  function salvaPost(){
+    if(estadoSalvaPostagem === undefined){
+      setEstadoSalvaPostagem(true)
+    }else{
+      setEstadoSalvaPostagem(!estadoSalvaPostagem)
+    }
+  }
+
   return (
     <div class="post">
             <div class="topo">
@@ -25,7 +37,7 @@ function Post(props) {
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name={estadoSalvaPostagem ? "bookmark" : "bookmark-outline"} onClick={() => salvaPost() }></ion-icon>
                 </div>
               </div>
 
