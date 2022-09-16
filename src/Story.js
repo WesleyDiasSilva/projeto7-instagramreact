@@ -1,9 +1,14 @@
 import React from 'react'
 
-function Story() {
+function Story(props) {
   return (
-    <div>
-      
+    <div class="story">
+      <div class="imagem">
+        <img src={props.imagemPerfil} alt='foto-do-story'/>
+      </div>
+      <div class="usuario">
+        {props.user}
+      </div>
     </div>
   )
 }
