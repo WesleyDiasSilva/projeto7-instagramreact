@@ -37,7 +37,7 @@ function Sugestoes() {
             Sugestões para você
             <div>Ver tudo</div>
           </div>
-            {todasSugestoes.map((s) => <Sugestao imagemUser={s.imagemUser} nomeUser={s.nomeUser} statusUser={s.statusUser}/>)}
+            {todasSugestoes.map((s) => <Sugestao key={s.imagemUser} imagemUser={s.imagemUser} nomeUser={s.nomeUser} statusUser={s.statusUser}/>)}
           
         </div>
   )

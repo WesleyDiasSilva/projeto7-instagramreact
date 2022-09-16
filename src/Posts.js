@@ -14,7 +14,7 @@ function Posts() {
       <div class="esquerda">
         <Stories/>
         <div class="posts">
-          {todosPosts.map((p) => <Post nome={p.nome} srcPerfil={p.srcPerfil} srcPost={p.srcPost} curtidoPor={p.curtidoPor} numeroLike={p.numeroLike}/>)}
+          {todosPosts.map((p) => <Post key={p.srcPost} nome={p.nome} srcPerfil={p.srcPerfil} srcPost={p.srcPost} curtidoPor={p.curtidoPor} numeroLike={p.numeroLike}/>)}
 
         </div>
       </div>

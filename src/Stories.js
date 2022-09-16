@@ -17,7 +17,7 @@ function Stories() {
 
   return (
     <div class="stories">
-      {todosStories.map((s) => <Story imagemPerfil={s.imagemPerfil} user={s.user}/>)}
+      {todosStories.map((s) => <Story key={s.imagemPerfil} imagemPerfil={s.imagemPerfil} user={s.user}/>)}
     <div class="setinha">
       <ion-icon name="chevron-forward-circle"></ion-icon>
     </div>
