@@ -11,6 +11,10 @@ body {
   font-size: 14px;
 }
 
+.like{
+  color: red
+}
+
 .navbar {
   width: 100%;
   display: flex;

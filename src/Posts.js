@@ -5,8 +5,19 @@ import Stories from './Stories'
 function Posts() {
 
   const todosPosts = [
-    {nome:'meowed',srcPerfil:'assets/img/meowed.svg',srcPost:'assets/img/gato-telefone.svg',curtidoPor:'respondeAí',numeroLike:'outras 101.523 pessoas'},
-    {nome:'barked',srcPerfil:'assets/img/barked.svg',srcPost:'assets/img/dog.svg',curtidoPor:'adorable_animals',numeroLike:'outras 99.159 pessoas'}
+    {nome:'meowed',
+    srcPerfil:'assets/img/meowed.svg'
+    ,srcPost:'assets/img/gato-telefone.svg'
+    ,imagemDeQuemCurtiu:'assets/img/respondeai.svg'
+    ,curtidoPor:'respondeAí'
+    ,numeroLike:'101523'},
+
+    {nome:'barked'
+    ,srcPerfil:'assets/img/barked.svg'
+    ,srcPost:'assets/img/dog.svg',
+    imagemDeQuemCurtiu: 'assets/img/adorable_animals.svg'
+    ,curtidoPor:'adorable_animals'
+    ,numeroLike:'99159'}
   ]
 
   return (
@@ -14,7 +25,7 @@ function Posts() {
       <div class="esquerda">
         <Stories/>
         <div class="posts">
-          {todosPosts.map((p) => <Post key={p.srcPost} nome={p.nome} srcPerfil={p.srcPerfil} srcPost={p.srcPost} curtidoPor={p.curtidoPor} numeroLike={p.numeroLike}/>)}
+          {todosPosts.map((p) => <Post key={p.srcPost} imagemDeQuemCurtiu={p.imagemDeQuemCurtiu} nome={p.nome} srcPerfil={p.srcPerfil} srcPost={p.srcPost} curtidoPor={p.curtidoPor} numeroLike={p.numeroLike}/>)}
 
         </div>
       </div>
