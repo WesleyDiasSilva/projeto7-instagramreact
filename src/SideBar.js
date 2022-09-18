@@ -6,7 +6,7 @@ function SideBar() {
   return (
     <div>
       <div class="sidebar">
-        <Usuario nome='Wesley'/>
+        <Usuario/>
         <Sugestoes/>
 
         <div class="links">

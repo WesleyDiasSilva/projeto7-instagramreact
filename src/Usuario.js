@@ -20,9 +20,9 @@ function Usuario(props) {
       <div class="usuario">
           <img onClick={() => mudaFoto()} src={fotoUsuario ? fotoUsuario : "assets/img/catanacomics.svg"} alt="imagem-perfil-usuario"/>
           <div class="texto">
-            <strong>catanacomics</strong>
+            <strong>wdiazs</strong>
             <span>
-              {nomeUsuario ? nomeUsuario : 'Catana'}
+              {nomeUsuario ? nomeUsuario : 'Wesley'}
               <ion-icon name="pencil" onClick={() => mudaNome()}></ion-icon>
             </span>
           </div>
