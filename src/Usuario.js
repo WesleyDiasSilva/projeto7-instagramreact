@@ -2,8 +2,8 @@ import React from 'react'
 
 function Usuario(props) {
 
-  let [nomeUsuario, setNomeUsuario] = React.useState()
-  let [fotoUsuario, setFotoUsuario] = React.useState()
+  let [nomeUsuario, setNomeUsuario] = React.useState(null)
+  let [fotoUsuario, setFotoUsuario] = React.useState(null)
 
   function mudaNome(){
     let nome = prompt('Qual é o seu nome?');
@@ -18,11 +18,11 @@ function Usuario(props) {
 
   return (
       <div class="usuario">
-          <img onClick={() => mudaFoto()} src={fotoUsuario ? fotoUsuario : "assets/img/catanacomics.svg"} alt="imagem-perfil-usuario"/>
+          <img onClick={() => mudaFoto()} src={fotoUsuario ? fotoUsuario : props.imagem} alt="imagem-perfil-usuario"/>
           <div class="texto">
-            <strong>wdiazs</strong>
+            <strong>{props.perfil}</strong>
             <span>
-              {nomeUsuario ? nomeUsuario : 'Wesley'}
+              {nomeUsuario ? nomeUsuario : props.nome}
               <ion-icon name="pencil" onClick={() => mudaNome()}></ion-icon>
             </span>
           </div>
@@ -30,4 +30,4 @@ function Usuario(props) {
   )
 }
 
-export default Usuario
+export default Usuario;

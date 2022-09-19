@@ -6,7 +6,7 @@ function SideBar() {
   return (
     <div>
       <div class="sidebar">
-        <Usuario/>
+        <Usuario perfil={'wdiazs'} nome={'Wesley'} imagem={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2THmKfGvPsF9cGSRnUm5HNlzW-0kBu3VwKA&usqp=CAU'}/>
         <Sugestoes/>
 
         <div class="links">
